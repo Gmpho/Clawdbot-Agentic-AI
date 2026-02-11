@@ -74,6 +74,7 @@ import { renderInstances } from "./views/instances.ts";
 import { renderLogs } from "./views/logs.ts";
 import { renderNodes } from "./views/nodes.ts";
 import { renderOverview } from "./views/overview.ts";
+import { renderDashboard } from "./views/dashboard.ts";
 import { renderSessions } from "./views/sessions.ts";
 import { renderSkills } from "./views/skills.ts";
 import { renderUsage } from "./views/usage.ts";
@@ -137,8 +138,8 @@ export function renderApp(state: AppViewState) {
               <img src=${basePath ? `${basePath}/favicon.svg` : "/favicon.svg"} alt="OpenClaw" />
             </div>
             <div class="brand-text">
-              <div class="brand-title">OPENCLAW</div>
-              <div class="brand-sub">Gateway Dashboard</div>
+              <div class="brand-title">BRAND STRIKE TIPS</div>
+              <div class="brand-sub">Racing Intelligence Dashboard</div>
             </div>
           </div>
         </div>
@@ -207,6 +208,24 @@ export function renderApp(state: AppViewState) {
             ${isChat ? renderChatControls(state) : nothing}
           </div>
         </section>
+
+        ${
+          state.tab === "dashboard"
+            ? renderDashboard({
+                connected: state.connected,
+                assistantName: state.assistantName,
+                presenceCount,
+                sessionsCount,
+                cronEnabled: state.cronStatus?.enabled ?? null,
+                cronNext,
+                basePath: state.basePath,
+                onJumpToChat: () => state.setTab("chat"),
+                onJumpToChannels: () => state.setTab("channels"),
+                onJumpToCron: () => state.setTab("cron"),
+              })
+            : nothing
+        }
+
 
         ${
           state.tab === "overview"

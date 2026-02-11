@@ -1,0 +1,38 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="horseTitle horseDesc">
+  <title id="horseTitle">Brand Strike Tips horse racing banner</title>
+  <desc id="horseDesc">Stylized horse racing scene with track and money-inspired accents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="track" x1="40" y1="290" x2="600" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="70" x2="520" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/>
+  <path d="M30 285C130 250 210 250 320 285C430 320 510 320 610 285" stroke="url(#track)" stroke-width="22" stroke-linecap="round"/>
+  <path d="M96 78H544" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="130" cy="78" r="22" fill="#22C55E" fill-opacity="0.3"/>
+  <circle cx="510" cy="78" r="18" fill="#22C55E" fill-opacity="0.25"/>
+
+  <g transform="translate(198 122)">
+    <path d="M145 18L171 30L195 28L222 38L243 55L267 64L283 86L277 98L252 98L235 84L216 79L206 91L174 101L146 111L107 113L79 103L59 91L43 96L24 96L19 87L31 69L49 66L59 45L80 28L114 25L132 12L145 18Z" fill="#F8FAFC"/>
+    <path d="M132 21L112 37L91 40L82 54L94 65L126 66L153 56L165 41L154 25L132 21Z" fill="#CBD5E1"/>
+    <path d="M108 111L98 150L79 150L80 115L108 111Z" fill="#E2E8F0"/>
+    <path d="M182 107L191 150L212 150L203 106L182 107Z" fill="#E2E8F0"/>
+    <path d="M230 93L247 150L270 150L256 97L230 93Z" fill="#E2E8F0"/>
+    <path d="M69 96L59 150H38L47 101L69 96Z" fill="#E2E8F0"/>
+  </g>
+
+  <g fill="#A7F3D0" fill-opacity="0.85" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="22">
+    <text x="54" y="58">💸</text>
+    <text x="578" y="58">🏇</text>
+  </g>
+</svg>
