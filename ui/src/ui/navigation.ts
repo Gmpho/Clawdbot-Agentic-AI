@@ -1,13 +1,14 @@
+import { t } from "../i18n/index.ts";
 import type { IconName } from "./icons.js";
 
 export const TAB_GROUPS = [
-  { label: "Chat", tabs: ["chat"] },
+  { label: "chat", tabs: ["chat"] },
   {
     label: "Control",
-    tabs: ["dashboard", "overview", "channels", "instances", "sessions", "usage", "cron"],
+    tabs: ["overview", "channels", "instances", "sessions", "usage", "cron"],
   },
-  { label: "Agent", tabs: ["agents", "skills", "nodes"] },
-  { label: "Settings", tabs: ["config", "debug", "logs"] },
+  { label: "agent", tabs: ["agents", "skills", "nodes"] },
+  { label: "settings", tabs: ["config", "debug", "logs"] },
 ] as const;
 
 export type Tab =
@@ -163,8 +164,6 @@ export function titleForTab(tab: Tab) {
   switch (tab) {
     case "agents":
       return "Agents";
-    case "dashboard":
-      return "Dashboard";
     case "overview":
       return "Overview";
     case "channels":
@@ -198,8 +197,6 @@ export function subtitleForTab(tab: Tab) {
   switch (tab) {
     case "agents":
       return "Manage agent workspaces, tools, and identities.";
-    case "dashboard":
-      return "Brand Strike Tips command center for races, alerts, and momentum.";
     case "overview":
       return "Gateway status, entry points, and a fast health read.";
     case "channels":
